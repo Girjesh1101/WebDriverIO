@@ -1,0 +1,47 @@
+Web Interactions commands
+
+Note : $() --> use for single element
+       $$() --> use for multiple element
+
+1. click() --> click on the element
+2. addValue() --> add value with existing value [SendKeys]
+    2.1. clearValue() -- clean the field
+    2.2. setvalue() -- sendKey with clear exsiting value.
+
+3. doubleClick() -- double click on the locaator
+4. getText() -- get element's getText
+5. getValue() --> get value attribute value
+
+6. isClickable() --> assert is click ? [Use for button]
+7. isDisplayed() -- > assert is display ? [Use for value]
+8. isEnabled() --> assert is enable ?
+9. isSelected() --> assert is isSelect [Use for checkbox]
+
+Dropdown handling
+10. selectByAttribute() --> select it by attribute value ("value","option1")
+    10.1. selectByIndex() --> select by index 1,2,3,4,5..n
+    10.2. selectByVisibleText() --> select By text [String]
+
+11. scrollIntoView() --> scroll till element (element)
+    11.1 scrollIntoView(false) --> scroll till bottom
+
+Window handling
+12. getWindowHandle() --> use for handle single Window
+    12.1. getWindowHandles() --> use for handle multiple window 
+    12.2. switchToWindow() --> switch to window (parent/custom/child)   
+
+Alert handling
+13. browser.acceptAlert() -->   okay the Alert
+    13.1. 
+
+
+
+Types of Waits in WebdriverIO
+Notes
+1. Implicit wait - it is basically use for wait for the locator $ and $$ to load. otherwise will excute in 0 milliseconds.
+    browser.setTimeout({implicit: 5000});
+
+2. waitUnitl(condition,{timeout:1000, interval: 500}) --> retry and give condition over the element
+
+Reload , Refresh , back and forwad
+    1. browser.reloadSession();
