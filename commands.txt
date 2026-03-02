@@ -45,3 +45,7 @@ Notes
 
 Reload , Refresh , back and forwad
     1. browser.reloadSession();
+
+
+
+npx wdio repl chrome

@@ -1,3 +1,5 @@
+import dotenv from "dotenv"
+dotenv.config()
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -55,7 +57,10 @@ export const config: WebdriverIO.Config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        "goog:chromeOptions":{
+            args: ["--disable-notifications","--disable-web-security",]
+        }
     }],
 
     //
@@ -151,7 +156,7 @@ export const config: WebdriverIO.Config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression: '@demo',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.

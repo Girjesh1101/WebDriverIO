@@ -1,4 +1,5 @@
 Feature: Automate Swag Lab
+    
     @demo
     Scenario Outline:  Demo with swag lab
     Given Login to invertory web app
