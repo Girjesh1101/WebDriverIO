@@ -1,6 +1,7 @@
 import { Given, Then } from "@wdio/cucumber-framework";
-import { expect } from "chai";
-import { count } from "node:console";
+import * as chai from "chai";
+const { expect } = chai;
+
 
 Given(/^open the home page$/, async()=>{
 

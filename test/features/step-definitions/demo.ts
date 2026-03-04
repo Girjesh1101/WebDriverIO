@@ -1,7 +1,7 @@
 import { Given, When , Then } from "@wdio/cucumber-framework";
 
-// import { expect } from "expect-webdriverio";
-import { expect } from "chai";
+import * as chai from "chai";
+const { expect } = chai;
 
 
 

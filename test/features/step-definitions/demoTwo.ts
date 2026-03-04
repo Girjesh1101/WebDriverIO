@@ -1,5 +1,6 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
-import { expect } from "chai";
+import * as chai from "chai";
+const { expect } = chai;
 
 Given(/^google page is opened$/, async function () {
     await browser.url("https://www.google.com/");

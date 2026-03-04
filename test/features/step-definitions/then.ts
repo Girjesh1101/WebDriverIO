@@ -1,5 +1,8 @@
 import { Then } from "@wdio/cucumber-framework"
-import { expect } from "chai";
+import * as chai from "chai";
+import logger from "../../helper/logger.ts";
+const { expect } = chai;
+
 
 Then(/^Invertory page shouold list (.*)$/, async function (numberOfProducts) {
 
@@ -11,7 +14,7 @@ Then(/^Invertory page shouold list (.*)$/, async function (numberOfProducts) {
 })
 
 Then(/^Validate all product have valid price$/, async function(){
-
+    logger.info("Checing the price..")
     let priceArr = await $$(".inventory_item_price");
     let priceStrArr = [];
     for(let i = 0 ; i < await priceArr.length; i++){
