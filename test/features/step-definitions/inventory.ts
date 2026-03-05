@@ -9,10 +9,9 @@ Given(/^As (a|an) (.*) user I login to invertory web app$/, async function (pref
   console.log(">> The userType : ", userType);
   
   //@ts-ignore
-  // const cfgUrl = (browser as any)?.config?.sauseDemoURL ?? process.env.SAUCE_DEMO_URL ?? "https://www.saucedemo.com/";
-  // await browser.url(cfgUrl)
-
-  await browser.url(browser.config.sauceDemoURL)
+  // use config if available, else environment var, else default
+  const cfgUrl = (browser as any)?.config?.sauceDemoURL ?? process.env.SAUCE_DEMO_URL ?? "https://www.saucedemo.com/";
+  await browser.url(cfgUrl);
     
     await browser.setTimeout({implicit:15000,pageLoad:10000})
     await browser.maximizeWindow();
