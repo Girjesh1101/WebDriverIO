@@ -1,6 +1,6 @@
 Feature: Automate Swag Lab
 
-    @demo
+    
     Scenario Outline:  Demo with swag lab
         Given As a standard user I login to invertory web app
             | userTper    | Username                |
